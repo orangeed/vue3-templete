@@ -11,6 +11,8 @@ async function bootstrap() {
 
   const app = createApp(App);
 
+  // 注册验证
+
   // 注册全局常用的 naive-ui 组件
   setupNaive(app);
 

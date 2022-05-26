@@ -5,7 +5,7 @@
       <n-card>
         <div class="view-account-top">
           <div class="view-account-top-logo">
-            <img src="" alt="" />
+            <!-- <img src="" alt="" /> -->
           </div>
           <div class="view-account-top-desc">中台前端/设计解决方案</div>
         </div>
@@ -40,6 +40,15 @@
                 </template>
               </n-input>
             </n-form-item>
+            <!-- 验证码 -->
+            <!-- <n-popover :overlap="true" placement="bottom" trigger="click">
+              <template #trigger>
+                <div class="check-box"> 点击开始验证 </div>
+              </template>
+              <div>
+               
+              </div>
+            </n-popover> -->
             <n-form-item class="default-color">
               <div class="flex justify-between">
                 <div class="flex-initial">
@@ -155,6 +164,16 @@ const handleSubmit = (e) => {
     }
   });
 };
+
+// 验证信息
+const checkInfo = reactive({
+  isPassing: false,
+});
+// 验证成功
+const handleVerifySuccess = (verify) => {
+  console.log('verify', verify);
+  console.log(1);
+};
 </script>
 
 <style lang="less" scoped>
@@ -191,6 +210,15 @@ const handleSubmit = (e) => {
     .ant-checkbox-wrapper {
       color: #515a6e;
     }
+  }
+
+  .check-box {
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    border: 1px solid #618be7;
+    border-radius: 4px;
+    cursor: pointer;
   }
 }
 
